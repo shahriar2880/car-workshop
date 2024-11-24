@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -29,7 +31,9 @@ const Navbar = () => {
         <li><a>Contact</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <Link href={'/'}>
+    <Image src='/assets/images/logo.png' width={80} height={60} alt='logo of author'></Image>
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
