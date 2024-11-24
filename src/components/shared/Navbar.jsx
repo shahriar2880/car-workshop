@@ -1,8 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { IoCartOutline, IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
+    const navItems = [
+        {
+            title: "Home",
+            path: "/"
+        },
+        {
+            title: "About",
+            path: "/about"
+        },
+        {
+            title: "Services",
+            path: "/serivces"
+        },
+        {
+            title: "Blog",
+            path: "/blog"
+        },
+        {
+            title: "Contact",
+            path: "/contact"
+        },
+    ]
   return (
     <div className="navbar bg-base-100 container mx-auto">
       <div className="navbar-start">
@@ -23,26 +46,17 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <ul
+          <div
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-3 shadow"
           >
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a>Services</a>
-            </li>
-            <li>
-              <a>Blog</a>
-            </li>
-            <li>
-              <a>Contact</a>
-            </li>
-          </ul>
+            {
+                navItems.map((item) => (
+                    <Link href={item.path} key={item.path}>{item.title}</Link>
+
+                ))
+            }
+          </div>
         </div>
         <Link href={"/"}>
           <Image
@@ -54,26 +68,21 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal justify-evenly gap-x-12">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>About</a>
-          </li>
-          <li>
-            <a>Services</a>
-          </li>
-          <li>
-            <a>Blog</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
-        </ul>
+        <div className="flex items-center justify-evenly gap-x-12">
+        {
+                navItems.map((item) => (
+                    <Link href={item.path} key={item.path}>{item.title}</Link>
+
+                ))
+            }
+        </div>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-outline bg-red-500">Appoinment</a>
+        <div className="flex space-x-3 items-center">
+        <IoCartOutline className="text-xl" />
+        <IoSearch className="text-xl"/>
+        <a className="btn btn-outline btn-primary px-8">Appoinment</a>
+        </div>
       </div>
     </div>
   );
