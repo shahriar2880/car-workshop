@@ -21,4 +21,31 @@ const Banner = () => {
   );
 };
 
+const banners = [
+    {
+        title: "Affordable Price For Car Servicing",
+        description: "There are many variations of passages of available, but the major",
+        next: "#slide2",
+        prev: "#slide4"
+    },
+    {
+        title: "Affordable Price For Car Servicing",
+        description: "There are many variations of passages of available, but the major",
+        next: "#slide3",
+        prev: "#slide1"
+    },
+    {
+        title: "Affordable Price For Car Servicing",
+        description: "There are many variations of passages of available, but the major",
+        next: "#slide4",
+        prev: "#slide2"
+    },
+    {
+        title: "Affordable Price For Car Servicing",
+        description: "There are many variations of passages of available, but the major",
+        next: "#slide1",
+        prev: "#slide3"
+    },
+]
+
 export default Banner;
