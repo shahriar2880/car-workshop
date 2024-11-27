@@ -20,11 +20,16 @@ module.exports = {
     themes: [
       {
         carWorkshopTheme: {
-          "primary": "#a991f7",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "blue",
+          secondary: "teal",
+
+          ".btn-primary":{
+            "color": "#fff"
+          },
+          ".btn-outline.btn-primary:hover":{
+            "color": "#fff"
+          },
         },
       },
       "dark",
