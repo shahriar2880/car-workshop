@@ -1,4 +1,5 @@
 import React from 'react'
+import ServiceCard from '../card/ServiceCard'
 
 const Services = () => {
   return (
@@ -9,7 +10,7 @@ const Services = () => {
         <p>First appearing in the early 1900s,[2] many filling stations offered vehicle repair services as part of their full service operation. This once popular trend has declined significantly over the years as many locations found it more profitable to exchange vehicle service bays for grocery isles, which ultimately led to the emergence of the quick oil change industry.</p>
       </div>
       <div className='container mx-auto mt-12 font-bold text-red-700'>
-        Service Cards
+        <ServiceCard/>
       </div>
     </div>
   )

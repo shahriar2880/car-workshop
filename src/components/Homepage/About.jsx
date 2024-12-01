@@ -23,7 +23,7 @@ const About = () => {
           style={{ border: '10px solid white' }}
         />
       </div>
-      <div className="space-y-10 ">
+      <div className="space-y-10 mt-5">
         <h1 className="text-red-700 font-bold">About Us</h1>
         <h2 className="text-5xl font-bold">We are qualified & experienced in this field</h2>
         <p>
