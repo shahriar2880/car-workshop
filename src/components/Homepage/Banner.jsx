@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const Banner = () => {
@@ -14,7 +13,7 @@ const Banner = () => {
             }}
             key={index}
             id={`slide${index + 1}`}
-            className="carousel-item relative w-full h-[80vh] bg-top bg-no-repeat"
+            className="carousel-item relative w-full h-[70vh] bg-top bg-no-repeat"
           >
             <div className="h-full w-full flex items-center pl-36 text-white">
               <div className="space-y-6">
