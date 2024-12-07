@@ -19,9 +19,11 @@ const page = () => {
         <div className='border-2 p-12'>
         <h6 className='text-3xl font-semibold text-center mb-12'>Log In</h6>
             <form onSubmit={handleLogin} action=''>
+            <label htmlFor='name'>Name</label><br/>
+            <input type="text" name='name' placeholder="Your Name" className="mt-3 input input-bordered w-full" /> <br/><br/>
             <label htmlFor='email'>Email</label><br/>
             <input type="text" name='email' placeholder="Your Email" className="mt-3 input input-bordered w-full" /> <br/><br/>
-            <label htmlFor='email'>Password</label><br/>
+            <label htmlFor='password'>Password</label><br/>
             <input type="text" name='password' placeholder="Your Password" className="mt-3 input input-bordered w-full" />
             <br/><br/>
             <button type='submit' className='w-full btn btn-primary'>Log In</button>
