@@ -26,7 +26,7 @@ const page = () => {
             <label htmlFor='password'>Password</label><br/>
             <input type="text" name='password' placeholder="Your Password" className="mt-3 input input-bordered w-full" />
             <br/><br/>
-            <button type='submit' className='w-full btn btn-primary'>Log In</button>
+            <button type='submit' className='w-full btn btn-primary'>Sign Up</button>
             </form>
             <div>
                 <h6 className='my-12 text-center'>Or Sign Up With</h6>
