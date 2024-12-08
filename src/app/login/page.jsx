@@ -1,14 +1,20 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
+import {signIn} from "next-auth/react"
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import Link from 'next/link';
 
 const page = () => {
-  const handleLogin = async () =>{
-
+  const handleLogin = async (event) =>{
+    event.preventDefault();
+    const email = event.target.email.value
+    const password = event.target.password.value
+    const  resp = signIn('credentials',{
+      email,password, redirect : false
+    })
   }
   return (
     <div className='container px-24 mx-auto py-24'>
