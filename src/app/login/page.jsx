@@ -12,9 +12,10 @@ const page = () => {
     event.preventDefault();
     const email = event.target.email.value
     const password = event.target.password.value
-    const  resp = signIn('credentials',{
+    const  resp = await signIn('credentials',{
       email,password, redirect : false
-    })
+    });
+    console.log(resp)
   }
   return (
     <div className='container px-24 mx-auto py-24'>
