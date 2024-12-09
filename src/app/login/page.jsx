@@ -6,8 +6,10 @@ import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import Link from 'next/link';
+import {useRouter} from 'next/navigation';
 
 const page = () => {
+  const router = useRouter()
   const handleLogin = async (event) =>{
     event.preventDefault();
     const email = event.target.email.value
@@ -15,7 +17,9 @@ const page = () => {
     const  resp = await signIn('credentials',{
       email,password, redirect : false
     });
-    console.log(resp)
+    if(resp.status === 200){
+      router.push('/')
+    }
   }
   return (
     <div className='container px-24 mx-auto py-24'>

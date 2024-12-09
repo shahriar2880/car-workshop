@@ -1,4 +1,5 @@
-import { useSession } from "next-auth/react";
+"use client"
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -84,7 +85,10 @@ const Navbar = () => {
         <IoCartOutline className="text-xl" />
         <IoSearch className="text-xl"/>
         <a className="btn btn-outline btn-primary px-8">Appoinment</a>
-        <Link href={'/login'} className="btn btn-outline btn-primary px-8">LogIn</Link>
+        { !session.data ?
+          <Link href={'/login'} className="btn btn-outline btn-primary px-8">LogIn</Link>:
+          <button className="btn btn-outline btn-primary px-8" onClick={() => signOut()}>Logout</button>
+          }
         </div>
       </div>
     </div>
