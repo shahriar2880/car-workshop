@@ -7,6 +7,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
+import SocialSignIn from '@/components/shared/SocialSignIn';
 
 const page = () => {
   const router = useRouter()
@@ -39,13 +40,10 @@ const page = () => {
             </form>
             <div>
                 <h6 className='my-12 text-center'>Or Sign In With</h6>
-                <div className='flex items-center justify-center space-x-2'>
-                <button className='btn flex items-center justify-center text-primary'><FcGoogle /></button>
-                <button className='btn flex items-center justify-center text-primary'><BsGithub /></button>
-                <button className='btn flex items-center justify-center text-primary'><FaFacebook /></button>
-                </div>
+                <SocialSignIn/>
+                <h6 className='my-12 text-center'>Not have an account ? <Link className='text-primary font-semibold' href={'/signup'}>Sign Up</Link></h6>
+
             </div>
-            <h6 className='my-12 text-center'>Not have an account ? <Link className='text-primary font-semibold' href={'/signup'}>Sign Up</Link></h6>
         </div>
       </div>
     </div>

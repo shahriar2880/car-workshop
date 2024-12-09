@@ -1,4 +1,5 @@
 "use client"
+import SocialSignIn from '@/components/shared/SocialSignIn'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -47,13 +48,10 @@ const page = () => {
             </form>
             <div>
                 <h6 className='my-12 text-center'>Or Sign Up With</h6>
-                <div className='flex items-center justify-center space-x-2'>
-                <button className='btn flex items-center justify-center text-primary'><FcGoogle /></button>
-                <button className='btn flex items-center justify-center text-primary'><BsGithub /></button>
-                <button className='btn flex items-center justify-center text-primary'><FaFacebook /></button>
-                </div>
+                <SocialSignIn/>
+                <h6 className='my-12 text-center'>Already have an account ? <Link className='text-primary font-semibold' href={'/login'}>Log In</Link></h6>
+
             </div>
-            <h6 className='my-12 text-center'>Already have an account ? <Link className='text-primary font-semibold' href={'/login'}>Log In</Link></h6>
         </div>
       </div>
     </div>
