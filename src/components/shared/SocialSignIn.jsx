@@ -1,3 +1,4 @@
+import { signIn } from "next-auth/react";
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
@@ -5,7 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const SocialSignIn = () => {
     const handleSocialLogIn = async (provider) => {
-
+        const resp = await signIn(provider)
+        // console.log(resp)
     }
   return (
     <div className="flex items-center justify-center space-x-2">

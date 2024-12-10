@@ -85,8 +85,9 @@ const Navbar = () => {
         <IoCartOutline className="text-xl" />
         <IoSearch className="text-xl"/>
         <a className="btn btn-outline btn-primary px-8">Appoinment</a>
-        { !session.data ?
-          <Link href={'/login'} className="btn btn-outline btn-primary px-8">LogIn</Link>:
+        { !session.data &&
+          <Link href={'/login'} className="btn btn-outline btn-primary px-8">LogIn</Link> }
+          { session.data &&
           <button className="btn btn-outline btn-primary px-8" onClick={() => signOut()}>Logout</button>
           }
         </div>
