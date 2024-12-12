@@ -89,7 +89,7 @@ const Navbar = () => {
           session?.status ==='loading' &&
           <h6>Loading...</h6> 
         } */}
-        { !session?.status ==='unauthenticated' &&
+        { session?.status ==='unauthenticated' &&
           <Link href={'/login'} className="btn btn-outline btn-primary px-8">LogIn</Link> }
           { session?.status ==='authenticated'  &&
           <button className="btn btn-outline btn-primary px-8" onClick={() => signOut()}>Logout</button>

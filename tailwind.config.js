@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': '340px',
+        // => @media (min-width: 640px) { ... }
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
