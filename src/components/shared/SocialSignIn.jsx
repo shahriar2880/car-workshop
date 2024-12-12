@@ -1,13 +1,19 @@
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const SocialSignIn = () => {
-    const handleSocialLogIn = async (provider) => {
-        const resp = await signIn(provider)
+    const router = useRouter()
+    const session = useSession()
+    const handleSocialLogIn =  (provider) => {
+        const resp = signIn(provider,{redirect: false})
         // console.log(resp)
+    }
+    if(session.status === 'authenticated'){
+        router.push('/')
     }
   return (
     <div className="flex items-center justify-center space-x-2">
